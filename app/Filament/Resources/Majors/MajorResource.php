@@ -19,11 +19,13 @@ use Filament\Tables\Table;
 class MajorResource extends Resource
 {
     protected static ?string $model = Major::class;
+    protected static ?int $navigationSort = 3;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-book-open';
     protected static string|BackedEnum|null $activeNavigationIcon = 'heroicon-s-book-open';
+    protected static string|\UnitEnum|null $navigationGroup = 'Students Management';
 
-    protected static ?string $recordTitleAttribute = 'id';
+    protected static ?string $recordTitleAttribute = 'name';
 
     public static function form(Schema $schema): Schema
     {

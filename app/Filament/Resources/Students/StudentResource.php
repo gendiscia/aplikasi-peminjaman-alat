@@ -19,9 +19,14 @@ use Filament\Tables\Table;
 class StudentResource extends Resource
 {
     protected static ?string $model = Student::class;
+    protected static ?int $navigationSort = 1;
+
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-academic-cap';
     protected static string|BackedEnum|null $activeNavigationIcon = 'heroicon-s-academic-cap';
+   protected static string|\UnitEnum|null $navigationGroup = 'Students Management';
+
+
 
     protected static ?string $recordTitleAttribute = 'id';
 
